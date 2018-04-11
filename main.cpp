@@ -31,7 +31,7 @@ int main()
   
   //periods = periods + 1;
 
-  vector <vector <float > > score;
+  vector <vector <double > > score;
  
   score.resize(teams);
  
@@ -48,6 +48,12 @@ int main()
       }
   }
   
+  //score[0][1] = "Player 2: ";
+  //score[0][2] = "Player 3: ";
+  //score[0][3] = "Player 4: ";
+  //score[0][4] = "Player 5: ";
+  //score[0][5] = "Player 6: ";
+
   //once created, display the scoreboard
   
   cout<<"SCOREBOARD\n";
