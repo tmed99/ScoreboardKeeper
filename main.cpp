@@ -51,6 +51,7 @@ int main()
   //once created, display the scoreboard
   
   cout<<"SCOREBOARD\n";
+  cout<<"Player 1: ";
 
   for (int teams = 0; teams <score.size(); teams++)
     {
