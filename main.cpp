@@ -8,6 +8,8 @@ const int MAX_TEAMS = 4;
 const int MIN_PERIODS = 1;
 const int MIN_TEAMS = 1;
 
+void printScoreboard(vector < vector <int> >);
+
 int main()
 {
   int periods;
@@ -28,10 +30,8 @@ int main()
   else
   {
    //make scoreboard and fill it with zeros
-  
-  //periods = periods + 1;
-
-  vector <vector <double > > score;
+ 
+  vector <vector <int > > score;
  
   score.resize(teams);
  
@@ -48,26 +48,25 @@ int main()
       }
   }
   
-  //score[0][1] = "Player 2: ";
-  //score[0][2] = "Player 3: ";
-  //score[0][3] = "Player 4: ";
-  //score[0][4] = "Player 5: ";
-  //score[0][5] = "Player 6: ";
-
-  //once created, display the scoreboard
+  printScoreboard(score);
   
-  cout<<"SCOREBOARD\n";
-  cout<<"Player 1: ";
-
-  for (int teams = 0; teams <score.size(); teams++)
-    {
-      for (int periods = 0; periods < score[teams].size(); periods++)
-        {
-          cout<< score[teams][periods]; 
-          cout<< "|"; 
-        }
-        cout<<endl;
-    } 
   }
   return 0;
-}
+ 
+   }
+   
+   void printScoreboard(vector < vector<int> >score)
+    { 
+      cout<<"SCOREBOARD\n";
+      cout<<"Player 1: ";
+
+      for (int teams = 0; teams <score.size(); teams++)
+        {
+          for (int periods = 0; periods < score[teams].size(); periods++)
+            {
+              cout<< score[teams][periods]; 
+              cout<< "|"; 
+            }
+              cout<<endl;
+        } 
+     }
